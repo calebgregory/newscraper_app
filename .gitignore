@@ -28,3 +28,4 @@ node_modules
 lib/config
 www/lib
 node_modules
+www/styles/*.css
