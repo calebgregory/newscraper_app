@@ -7,7 +7,9 @@ var express   = require('express')
   , path      = require('path')
   , socketio  = require('socket.io');
 
-require('../lib/config/secrets').config();
+if(process.env.NODE_ENV !== 'production') {
+  require('../lib/config/secrets').config();
+}
 
 var routes  = require('./routes');
 
