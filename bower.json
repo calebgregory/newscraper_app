@@ -1,0 +1,25 @@
+{
+  "name": "entities",
+  "version": "1.0.0",
+  "homepage": "https://github.com/calebgregory/entities",
+  "authors": [
+    "calebgregory <calebgregory@gmail.com>"
+  ],
+  "main": "index.js",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "d3": "~3.5.6",
+    "socket.io-client": "~1.3.7",
+    "jquery": "~2.1.4"
+  }
+}

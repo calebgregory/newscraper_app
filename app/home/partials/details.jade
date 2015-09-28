@@ -1,0 +1,25 @@
+.internal-content
+  h1 Details on metrics
+  h3 A recipe for fun
+  p To find how an article ranks, first chop up each article by word, place these words alongside a lexicon that groups words with 'sentiment values' - something like
+    em  'good -> +1'
+    |  and
+    em  'bad -> -1'
+    | . Then you see what words in the lexicon are also in the article, add the values of the matched words together, and
+    em  bam!
+    | : you've got yourself a sentiment analysis.
+  p This is a crude method, called the 'Bag of Words' model, but it can turn up interesting results, especially if you use backpropagation of error to train your lexicon to have better and better sentiment values associated with each word.
+  p Here, I'm sticking to summing using a lexicon provided by one or more of the gentlemen
+    a(href="http://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html")  Bing Liu, Minqing Hu and Junsheng Cheng
+    | . I have weighted all positive values to 1.475 and negative values to -1. The lexicon contains 4782 negative words and 2006 positive words. Knowing this, I set the weights to compensate for this imbalance.
+  p When tested using the
+    a(href="http://ai.stanford.edu/~amaas/data/sentiment/")  Large Movie Review Dataset
+    |  with these weights, I actually got a
+    em  70.992%
+    |  success rate for positive classification (sum > 0) and a
+    em  70.24%
+    |  success rate for negative classification (sum < 0). Not bad.
+  h3 How do the sources rank?
+  p Well, placed under the same metrics, the average sentiment/article of each news source looks like
+  .graph
+  p Once I have a more sophisticated and trained dataset, I'd like to keep track of these movements over time, to see how change in season, fiscal quarter, and in general quarterly observed cycles affect the mood of the news.
