@@ -25,7 +25,7 @@ app.set('view engine', 'jade');
 
 app.use(less(path.join(process.cwd(),'www')));
 
-app.locals.title = 'Entities';
+app.locals.title = 'News Scraper';
 
 app.use(morgan('dev'));
 
